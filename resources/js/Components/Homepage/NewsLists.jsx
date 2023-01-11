@@ -1,3 +1,5 @@
+import React from "react";
+
 const isNews = (news) => {
   return news.map((data, i) => {
     return (
