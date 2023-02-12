@@ -1,7 +1,6 @@
 import { Link } from "@inertiajs/inertia-react";
 
 const Navbar = ({ user }) => {
-  console.log(user);
   return (
     <div className="navbar bg-base-100">
       <div className="flex-1">
@@ -28,12 +27,12 @@ const Navbar = ({ user }) => {
             {!user ? (
               <>
                 <li>
-                  <Link href={route("login")} as="button">
+                  <Link href={route('login')} as="button">
                     Login
                   </Link>
                 </li>
                 <li>
-                  <Link href={route("register")} as="button">
+                  <Link href={route('register')} as="button">
                     Register
                   </Link>
                 </li>
@@ -42,7 +41,7 @@ const Navbar = ({ user }) => {
               <>
                 <li>
                   <Link
-                    href={route("dashboard")}
+                    href={route('dashboard')}
                     as="button"
                     className="justify-between"
                   >
@@ -51,12 +50,12 @@ const Navbar = ({ user }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link href={route("register")} as="button">
+                  <Link>
                     Settings
                   </Link>
                 </li>
                 <li>
-                  <Link href={route("register")} as="button">
+                  <Link href={route('logout')} method="post" as="button">
                     Logout
                   </Link>
                 </li>
